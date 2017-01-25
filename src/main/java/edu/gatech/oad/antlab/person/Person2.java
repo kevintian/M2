@@ -31,7 +31,16 @@ public class Person2 {
 	 */
 	private String calc(String input) {
 	  //Person 2 put your implementation here
-	  return null;
+	  java.util.List<Character> shuffleList = new java.util.ArrayList<>();
+      StringBuilder result = new StringBuilder();
+      for (int i = 0; i < input.length(); i++) {
+        shuffleList.add(i,input.charAt(i));
+      }
+        java.util.Collections.shuffle(shuffleList);
+      for (int i = 0; i < input.length(); i++) {
+        result.append(shuffleList.get(i));
+      }
+	  return result.toString();
 	}
 	/**
 	 * Return a string rep of this object
