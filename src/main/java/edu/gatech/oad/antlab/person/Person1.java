@@ -30,7 +30,7 @@ public class Person1 {
 	 * @return the modified string
 	 */
 	private String calc(String input) {
-		String s = input.substring(2, input.length);
+		String s = input.substring(2, input.length());
 		s = s + input.charAt(0) + input.charAt(1);
 	  return s;
 	}
