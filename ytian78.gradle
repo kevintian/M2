@@ -1,0 +1,19 @@
+defaultTasks  'jar'
+
+apply plugin: 'java'
+
+jar  {
+  manifest {
+    attributes  'Implementation-Title' : 'ytian78 Gradle' ,
+                'Implementation-Version' : 1.0,
+                'Main-Class' : 'edu.gatech.oad.antlab.pkg1.AntLabMain',
+                'Class-Path': 'lib/resources.jar'
+    }
+
+    destinationDir = file(".")
+    archiveName = 'ytian78.jar'
+}
+
+dependencies {
+    compile files('lib/resources.jar')
+}
