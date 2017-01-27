@@ -1,0 +1,23 @@
+defaultTasks  'jar'
+
+apply plugin: 'java'
+
+jar  {
+  manifest {
+    attributes  'Implementation-Title' : 'sgurrala3 Gradle Build' ,
+                'Implementation-Version' : 1.0,
+                'Main-Class' : 'edu.gatech.oad.antlab.pkg1.AntLabMain',
+                'Class-Path': 'lib/resources.jar'
+    }
+
+    destinationDir = file(".")
+    archiveName = 'sgurrala3.jar'
+}
+
+dependencies {
+    compile files('lib/resources.jar')
+}
+
+repositories {
+   mavenCentral()
+}
