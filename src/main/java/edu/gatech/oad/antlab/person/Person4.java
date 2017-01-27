@@ -33,7 +33,7 @@ public class Person4 {
       String output = "";
       char inputArray[] = input.toCharArray();
       for (int i = 0; i < inputArray.length; i++) {
-        output += inputArray[0] + 1;
+        output += (char) (inputArray[i] + 1);
       }
       return output;
     }
